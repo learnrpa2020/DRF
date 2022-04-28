@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'firstApp',
     'fbvSerializers',
     'cbvSerializers',
+    'mixinApp',
 ]
 
 MIDDLEWARE = [

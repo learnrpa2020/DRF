@@ -13,23 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path,include
-from firstApp.views import employeeView
-from rest_framework.routers import DefaultRouter
+"""from django.urls import path
 from mixinApp import views
 
-router = DefaultRouter()
-router.register('course',views.CourseViewSet) 
-
-
 urlpatterns = [
-    #path('admin/', admin.site.urls),
-    #path('emp/',employeeView),
-    #path('firstApp/',include('firstApp.urls')),
-    #path('fbvSerializers/',include('fbvSerializers.urls')),
-    #path('cbvSerializers/',include('cbvSerializers.urls')),
-    #path('mixinApp/',include('mixinApp.urls')),
-    path('courses/',include(router.urls)),
-
+    path('mymixin/',views.CourseList.as_view()),
+    path('mymixin/<str:pk>',views.CourseDetail.as_view()),
 ]
+"""
